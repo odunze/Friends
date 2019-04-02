@@ -12,20 +12,47 @@
         <!--Friend List-->
         <scene sceneID="RaZ-I7-2F2">
             <objects>
-                <tableViewController title="Friend List" id="gBA-17-MbD" sceneMemberID="viewController">
+                <tableViewController title="Friend List" id="gBA-17-MbD" customClass="FriendsView" customModule="Friends" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="F6A-lB-BfK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="yJx-xJ-jd5">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="friendCell" rowHeight="88" id="yJx-xJ-jd5" customClass="CellController" customModule="Friends" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="88"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yJx-xJ-jd5" id="CdC-HE-emB">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="87.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="6hz-Qh-tkF">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="87.5"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="lotannasunnies" translatesAutoresizingMaskIntoConstraints="NO" id="ffy-wb-Mgu">
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="87.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="87.5" id="y9U-OY-W9j"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="A very long nam" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SYs-RW-U4s">
+                                                    <rect key="frame" x="109" y="20.5" width="266" height="47"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="39"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="6hz-Qh-tkF" firstAttribute="leading" secondItem="CdC-HE-emB" secondAttribute="leading" id="GwE-kT-zb8"/>
+                                        <constraint firstItem="6hz-Qh-tkF" firstAttribute="top" secondItem="CdC-HE-emB" secondAttribute="top" id="NgJ-pe-aly"/>
+                                        <constraint firstAttribute="bottom" secondItem="6hz-Qh-tkF" secondAttribute="bottom" id="RgB-W7-CBq"/>
+                                        <constraint firstAttribute="trailing" secondItem="6hz-Qh-tkF" secondAttribute="trailing" id="cdI-lF-WB2"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="friendName" destination="SYs-RW-U4s" id="15k-Cq-UJz"/>
+                                    <outlet property="friendPhoto" destination="ffy-wb-Mgu" id="bVX-HT-AdD"/>
                                     <segue destination="BYZ-38-t0r" kind="show" id="rkD-pz-RvL"/>
                                 </connections>
                             </tableViewCell>
@@ -38,7 +65,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0eP-Na-pz0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-468" y="-37"/>
+            <point key="canvasLocation" x="-623" y="-37"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="tne-QT-ifu">

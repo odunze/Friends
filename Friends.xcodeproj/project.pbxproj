@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C2D4CE021E8054D00E2AF7C /* FriendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2D4CDF21E8054D00E2AF7C /* FriendsView.swift */; };
+		4C2D4CE221E805F700E2AF7C /* CellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2D4CE121E805F700E2AF7C /* CellController.swift */; };
 		4CD86410219E152D00A07240 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD8640F219E152D00A07240 /* AppDelegate.swift */; };
 		4CD86412219E152D00A07240 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD86411219E152D00A07240 /* DetailViewController.swift */; };
 		4CD86415219E152D00A07240 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CD86413219E152D00A07240 /* Main.storyboard */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C2D4CDF21E8054D00E2AF7C /* FriendsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsView.swift; sourceTree = "<group>"; };
+		4C2D4CE121E805F700E2AF7C /* CellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellController.swift; sourceTree = "<group>"; };
 		4CD8640C219E152D00A07240 /* Friends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Friends.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CD8640F219E152D00A07240 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CD86411219E152D00A07240 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +60,8 @@
 			children = (
 				4CD8640F219E152D00A07240 /* AppDelegate.swift */,
 				4CD86411219E152D00A07240 /* DetailViewController.swift */,
+				4C2D4CDF21E8054D00E2AF7C /* FriendsView.swift */,
+				4C2D4CE121E805F700E2AF7C /* CellController.swift */,
 				4CD86413219E152D00A07240 /* Main.storyboard */,
 				4CD86416219E152F00A07240 /* Assets.xcassets */,
 				4CD86418219E152F00A07240 /* LaunchScreen.storyboard */,
@@ -135,8 +141,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C2D4CE021E8054D00E2AF7C /* FriendsView.swift in Sources */,
 				4CD86412219E152D00A07240 /* DetailViewController.swift in Sources */,
 				4CD86410219E152D00A07240 /* AppDelegate.swift in Sources */,
+				4C2D4CE221E805F700E2AF7C /* CellController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
